@@ -1,11 +1,15 @@
 import React from 'react'
 
-const PokemonThumb = ({id, image, name, type }) => {
+const PokemonThumb = ({id, image, name, type, showSidebar, setShowSidebar }) => {
     const style = type + " thumb-container";
     return (
-        <div className={style}>
+        <div className={style} onClick={() => setShowSidebar(!showSidebar)}>
             <div className="number"><small>#0{id}</small></div>
-            <img src={image} alt={name} />
+
+            { image ? 
+                <img src={image} alt={name} /> : 
+                <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png`} alt="unknow" /> 
+            }
             <div className="detail-wrapper">
                 <h3>{name}</h3>
                 <small>Type: {type}</small>

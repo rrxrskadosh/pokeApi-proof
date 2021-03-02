@@ -51,6 +51,10 @@ code {
   justify-content: center;
   min-height: 100vh;
   padding: 4rem 0.5rem;
+  background-image: url('https://pixelz.cc/wp-content/uploads/2019/03/pokemon-poke-ball-wqhd-1440p-wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 .pokemon-container {
